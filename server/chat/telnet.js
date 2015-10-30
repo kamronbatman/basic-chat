@@ -60,7 +60,7 @@ module.exports = function(chatServer) {
       if (!socket.disconnected) {
         chatServer.emit(socket, 'disconnect');
       }
-    })
+    });
 
     // Register the connection and attach it to the chat system.
     chatServer.newConnection(socket);

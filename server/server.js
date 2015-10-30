@@ -3,7 +3,7 @@ process.isProd = function () { return process.env.NODE_ENV === 'production'; };
 
 require('dotenv').load();
 
-if (process.isDev()) { process.env.port = process.env.portDev }
+if (process.isDev()) { process.env.port = process.env.portDev; }
 
 // Initialize our Chat Server
 var ChatServer = require('./chat/chat');
