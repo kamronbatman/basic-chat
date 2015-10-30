@@ -36,14 +36,14 @@ module.exports = function(chatServer) {
       //console.log('Data found!', data);
 
       var string = data.toString().trim();
-      //console.log('String Found!', string);
+      console.log('String Found!', string);
       if (string.length) {
         chatServer.emit(socket, 'message', string);
       }
     });
 
     telnetInput.on('command', function(command) {
-      //console.log('Command!!!', command);
+      console.log('Command!!!', command);
 
       // Disconnect commands
       if (command == 244 || command == 237) { socket.end(); }

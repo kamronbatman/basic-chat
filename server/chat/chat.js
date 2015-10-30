@@ -69,7 +69,9 @@ ChatServer.prototype.newConnection = function(socket) {
 
 ChatServer.prototype.setUserName = function(socket, newUser, data) {
   // People aren't channels silly!
-  if (data.startsWith('#')) {
+  if (!data) {
+    socket.emit('message', '<= You did not specify a valid name');
+  } else if (data.startsWith('#')) {
     socket.emit('message', '<= Sorry, names cannot start with a "#".');
   } else if (this.getSocket(data) === socket) {
     socket.emit('message', '<= You are already known as ' + socket.userName);
