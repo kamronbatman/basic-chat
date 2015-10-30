@@ -55,7 +55,7 @@ function ChatServer() {
 
     socket.disconnected = true;
   }.bind(this));
-};
+}
 
 // Accept a generic socket object.
 // This object must have a .emit, and utilize the handler.on function provided below
@@ -109,7 +109,7 @@ ChatServer.prototype.emit = function(socket, command, data) {
 
 // Get the user's socket by username
 ChatServer.prototype.getSocket = function(username) {
-  var username = username.toLowerCase().trim();
+  username = username.toLowerCase().trim();
 
   return _.reduce(this.sockets, function(memo, user, key) {
     return key === username ? user : null;
@@ -236,9 +236,9 @@ ChatServer.prototype.leaveAll = function(socket) {
 // Quit! Oh no! Fine, let's be gracious! :)
 ChatServer.prototype.quit = function(socket) {
   socket.end();
-}
+};
 
 // Change our name!
 ChatServer.prototype.nick = function(socket, data) {
   this.setUserName(socket, false, data);
-}
+};
