@@ -24,6 +24,7 @@
 ### Utilities
 - [Grunt](http://gruntjs.com/)
 - [npm](https://www.npmjs.com/)
+- [forever](https://github.com/foreverjs/forever)
 
 ## Installation
 
@@ -39,7 +40,7 @@ In the .env file, change NODE_ENV to `production` for deployment on a production
 
 ### Deployment
 
-With [Grunt](http://gruntjs.com/getting-started), and [npm](https://www.npmjs.com/#getting-started) installed globally, install dependencies by running the following commands from the terminal:
+With [npm](https://www.npmjs.com/#getting-started), [Grunt](http://gruntjs.com/getting-started), and [forever](https://github.com/foreverjs/forever) installed globally, install dependencies by running the following commands from the terminal:
 ```
 npm install
 grunt
