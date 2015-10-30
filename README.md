@@ -19,7 +19,7 @@
 ## Requirements
 
 ### Backend
-- [Node.js](https://nodejs.org/)
+- [Node.js](https://nodejs.org/) v4.2
 
 ### Utilities
 - [Grunt](http://gruntjs.com/)
